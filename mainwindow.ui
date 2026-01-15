@@ -27,8 +27,14 @@
       <height>201</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>新宋体</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
    </widget>
-   <widget class="QRadioButton" name="radioButton">
+   <widget class="QRadioButton" name="radioButton_Clinet">
     <property name="geometry">
      <rect>
       <x>530</x>
@@ -47,7 +53,7 @@
      <string>客户端</string>
     </property>
    </widget>
-   <widget class="QRadioButton" name="radioButton_2">
+   <widget class="QRadioButton" name="radioButton_Server">
     <property name="geometry">
      <rect>
       <x>410</x>
@@ -66,7 +72,7 @@
      <string>服务器端</string>
     </property>
    </widget>
-   <widget class="QComboBox" name="comboBox">
+   <widget class="QComboBox" name="comboBox_IPAddrees">
     <property name="geometry">
      <rect>
       <x>490</x>
@@ -80,6 +86,12 @@
       <family>仿宋</family>
       <pointsize>10</pointsize>
      </font>
+    </property>
+    <property name="editable">
+     <bool>true</bool>
+    </property>
+    <property name="currentText">
+     <string>127.0.0.1</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
@@ -120,7 +132,7 @@
      <string>监听端口:</string>
     </property>
    </widget>
-   <widget class="QSpinBox" name="spinBox">
+   <widget class="QSpinBox" name="spinBox_Port">
     <property name="geometry">
      <rect>
       <x>490</x>
@@ -136,7 +148,10 @@
      </font>
     </property>
     <property name="maximum">
-     <number>999999</number>
+     <number>65535</number>
+    </property>
+    <property name="value">
+     <number>6657</number>
     </property>
    </widget>
    <widget class="QGroupBox" name="groupBox">
@@ -171,7 +186,7 @@
      <item row="0" column="0">
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
-        <widget class="QPushButton" name="pushButton_Star">
+        <widget class="QPushButton" name="pushButton_StartListen">
          <property name="font">
           <font>
            <family>仿宋</family>
@@ -188,7 +203,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_2">
+        <widget class="QPushButton" name="pushButton_CloseListen">
          <property name="font">
           <font>
            <family>仿宋</family>
@@ -209,7 +224,7 @@
      <item row="1" column="0">
       <layout class="QHBoxLayout" name="horizontalLayout_2">
        <item>
-        <widget class="QPushButton" name="pushButton_3">
+        <widget class="QPushButton" name="pushButton_ConnectServer">
          <property name="font">
           <font>
            <family>仿宋</family>
@@ -226,7 +241,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_4">
+        <widget class="QPushButton" name="pushButton_DisconnectServer">
          <property name="font">
           <font>
            <family>仿宋</family>
@@ -328,7 +343,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QCheckBox" name="checkBox">
+      <widget class="QCheckBox" name="checkBox_ClientAutTest">
        <property name="font">
         <font>
          <family>仿宋</family>
@@ -359,7 +374,7 @@
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout_4">
      <item>
-      <widget class="QPushButton" name="pushButton_Quit">
+      <widget class="QPushButton" name="pushButton_Exit">
        <property name="font">
         <font>
          <family>仿宋</family>
@@ -376,7 +391,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_SendMes">
+      <widget class="QPushButton" name="pushButton_SendMsg">
        <property name="font">
         <font>
          <family>仿宋</family>
@@ -398,12 +413,12 @@
    <zorder>groupBox_3</zorder>
    <zorder>groupBox_2</zorder>
    <zorder>plainTextEdit_MsgList</zorder>
-   <zorder>radioButton</zorder>
-   <zorder>radioButton_2</zorder>
-   <zorder>comboBox</zorder>
+   <zorder>radioButton_Clinet</zorder>
+   <zorder>radioButton_Server</zorder>
+   <zorder>comboBox_IPAddrees</zorder>
    <zorder>label</zorder>
    <zorder>label_2</zorder>
-   <zorder>spinBox</zorder>
+   <zorder>spinBox_Port</zorder>
    <zorder>formLayoutWidget</zorder>
    <zorder>horizontalLayoutWidget_3</zorder>
    <zorder>horizontalLayoutWidget_4</zorder>
