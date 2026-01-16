@@ -21,9 +21,9 @@
    <widget class="QPlainTextEdit" name="plainTextEdit_MsgList">
     <property name="geometry">
      <rect>
-      <x>60</x>
+      <x>40</x>
       <y>50</y>
-      <width>281</width>
+      <width>311</width>
       <height>201</height>
      </rect>
     </property>
@@ -157,7 +157,7 @@
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>370</x>
+      <x>380</x>
       <y>20</y>
       <width>291</width>
       <height>241</height>
@@ -264,9 +264,9 @@
    <widget class="QGroupBox" name="groupBox_2">
     <property name="geometry">
      <rect>
-      <x>50</x>
+      <x>30</x>
       <y>20</y>
-      <width>301</width>
+      <width>331</width>
       <height>241</height>
      </rect>
     </property>
@@ -283,9 +283,9 @@
    <widget class="QGroupBox" name="groupBox_3">
     <property name="geometry">
      <rect>
-      <x>40</x>
+      <x>30</x>
       <y>270</y>
-      <width>631</width>
+      <width>641</width>
       <height>121</height>
      </rect>
     </property>
@@ -301,9 +301,9 @@
     <widget class="QPlainTextEdit" name="plainTextEdit_SendMsg">
      <property name="geometry">
       <rect>
-       <x>23</x>
+       <x>13</x>
        <y>30</y>
-       <width>581</width>
+       <width>611</width>
        <height>81</height>
       </rect>
      </property>
