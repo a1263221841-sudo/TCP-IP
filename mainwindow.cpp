@@ -74,13 +74,40 @@ void MainWindow::on_pushButton_UdpTest_clicked()
 }
 void MainWindow::TcpServerConnected()
 {
+    tcpSocket = tcpServer->nextPendingConnection();
+    if(!tcpSocketList.contains(tcpSocket))
+        tcpSocketList.append(tcpSocket);
+
+    connect(tcpSocket,&QTcpSocket::readyRead,this,
+            &MainWindow::ReadAllDate);
+    connect(tcpSocket,&QTcpSocket::disconnected,this,
+            &MainWindow::ClinetDisconnected);
+    QString strPort=QString::number((tcpSocket->peerPort()));
+
+    ui->plainTextEdit_MsgList->appendPlainText
+            ("\n[Prompt:New clinet connection:("+tcpSocket
+            ->peerAddress().toString()+":"+strPort+")]");
+    iCountReciveMsg=0;//证明有新的客服端连接进来了
+
+
+   // QDebug() << "Clinet connected:"
+           //  <<tcpSocket->peerAddress().toString();
+            //  <<tcpSocket->peerPort();
 
 }
 void MainWindow::ClinetDisconnected()
 {
+    QTcpSocket *client=dynamic_cast<QTcpSocket*>(sender());
 
+    QString strMsg=QString("\n[Prompt:Client disconnected:(%1:%2)]").arg(client->peerAddress().toString())
+            .arg(client->peerPort());
+    ui->plainTextEdit_MsgList->appendPlainText(strMsg);
 }
 void MainWindow::ReadAllDate()
 {
+    QTcpSocket *client=dynamic_cast<QTcpSocket*>(sender());
+    QByteArray buff =client->readAll();
+
+    //处理当前时间
 
 }

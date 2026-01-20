@@ -61,13 +61,14 @@ private:
 public:
     QTcpServer *tcpServer =nullptr;
     QTcpSocket *tcpSocket =nullptr;
-    QList<QTcpSocket*> tcpsocketList;
+    QList<QTcpSocket*> tcpSocketList;
 
     Network NetworkClient;
 private slots:
     void TcpServerConnected();
     void ClinetDisconnected();
     void ReadAllDate();
+
 
 };
 #endif // MAINWINDOW_H
