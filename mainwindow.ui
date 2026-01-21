@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>网络调试助手 V1.3</string>
+   <string>网络调试助手--TCP调试模块  V1.3</string>
   </property>
   <property name="windowIcon">
    <iconset resource="images.qrc">

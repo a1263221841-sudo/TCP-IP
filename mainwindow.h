@@ -64,10 +64,22 @@ public:
     QList<QTcpSocket*> tcpSocketList;
 
     Network NetworkClient;
+
+
+    //检测IP地址的合法性
+    bool CheckIpAddressIsValid(QString strIpAdress);
+
+    //控制客服端与服务器按钮之间的切换方法
+    void ClientButtonStateFunc();
+    void ServerButtonStateFunc();
+
 private slots:
     void TcpServerConnected();
     void ClinetDisconnected();
     void ReadAllDate();
+
+
+
 
 
 };
