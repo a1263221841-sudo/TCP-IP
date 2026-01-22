@@ -6,63 +6,262 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>520</width>
-    <height>317</height>
+    <width>627</width>
+    <height>323</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>网络调试助手--UDP调试模块 V1.3</string>
   </property>
-  <widget class="QDialogButtonBox" name="buttonBox">
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>images/udp.ico</normaloff>images/udp.ico</iconset>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
    <property name="geometry">
     <rect>
-     <x>290</x>
-     <y>20</y>
-     <width>81</width>
-     <height>241</height>
+     <x>10</x>
+     <y>0</y>
+     <width>321</width>
+     <height>301</height>
     </rect>
    </property>
-   <property name="orientation">
-    <enum>Qt::Vertical</enum>
-   </property>
-   <property name="standardButtons">
-    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+   <property name="title">
+    <string>消息队列</string>
    </property>
   </widget>
+  <widget class="QPlainTextEdit" name="plainTextEdit_DisplayMsgList">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>291</width>
+     <height>261</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>30</y>
+     <width>72</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string> IP 地址:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>70</y>
+     <width>72</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>监听端口:</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_UdpStartListen">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>110</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>启动监听</string>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>images/start.ico</normaloff>images/start.ico</iconset>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_UdpCloseListen">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>110</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>关闭监听</string>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>images/stop.ico</normaloff>images/stop.ico</iconset>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_UdpConnectServer">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>150</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>连接服务</string>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>images/connect.ico</normaloff>images/connect.ico</iconset>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_UdpDisconnectedServer">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>150</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>断开服务</string>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>images/disconnect.ico</normaloff>images/disconnect.ico</iconset>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_2">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>0</y>
+     <width>261</width>
+     <height>191</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>UDP调试选项</string>
+   </property>
+   <widget class="QComboBox" name="comboBox_UdpClientIpAddress">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>30</y>
+      <width>141</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>仿宋</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="editable">
+     <bool>true</bool>
+    </property>
+    <property name="currentText">
+     <string>127.0.0.1</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinBox_UdpClientPort">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>70</y>
+      <width>141</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>仿宋</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="maximum">
+     <number>65535</number>
+    </property>
+    <property name="value">
+     <number>6657</number>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QPlainTextEdit" name="plainTextEdit_UdpSendMsg">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>210</y>
+     <width>221</width>
+     <height>51</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_3">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>190</y>
+     <width>261</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>发送测试消息</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_UdpExit">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>280</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>退出程序</string>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>images/exit.ico</normaloff>images/exit.ico</iconset>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_UdpSendMsg">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>280</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>发送消息</string>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>images/sendmsg.ico</normaloff>images/sendmsg.ico</iconset>
+   </property>
+  </widget>
+  <zorder>groupBox_3</zorder>
+  <zorder>groupBox_2</zorder>
+  <zorder>groupBox</zorder>
+  <zorder>plainTextEdit_DisplayMsgList</zorder>
+  <zorder>label</zorder>
+  <zorder>label_2</zorder>
+  <zorder>pushButton_UdpStartListen</zorder>
+  <zorder>pushButton_UdpCloseListen</zorder>
+  <zorder>pushButton_UdpConnectServer</zorder>
+  <zorder>pushButton_UdpDisconnectedServer</zorder>
+  <zorder>plainTextEdit_UdpSendMsg</zorder>
+  <zorder>pushButton_UdpExit</zorder>
+  <zorder>pushButton_UdpSendMsg</zorder>
  </widget>
  <resources/>
- <connections>
-  <connection>
-   <sender>buttonBox</sender>
-   <signal>accepted()</signal>
-   <receiver>UDPDModule</receiver>
-   <slot>accept()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>248</x>
-     <y>254</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>157</x>
-     <y>274</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>buttonBox</sender>
-   <signal>rejected()</signal>
-   <receiver>UDPDModule</receiver>
-   <slot>reject()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>316</x>
-     <y>260</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>286</x>
-     <y>274</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>

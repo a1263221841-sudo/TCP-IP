@@ -1,0 +1,18 @@
+#ifndef UDPSERVERCLINET_H
+#define UDPSERVERCLINET_H
+
+#include <QObject>
+#include <QUdpSocket>
+#include <QHostAddress>
+#include <QMessageBox>
+class UDPServerClinet
+{
+public:
+    UDPServerClinet();
+    
+public:
+    QUdpSocket *udpSocketObject; //UDP套接字指针
+    QHostAddress udpHostAddress;//组播地址
+};
+
+#endif // UDPSERVERCLINET_H

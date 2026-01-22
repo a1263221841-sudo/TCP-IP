@@ -19,12 +19,14 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     network.cpp \
-    udpdmodule.cpp
+    udpdmodule.cpp \
+    udpserverclient.cpp
 
 HEADERS += \
     mainwindow.h \
     network.h \
-    udpdmodule.h
+    udpdmodule.h \
+    udpserverclient.h
 
 FORMS += \
     mainwindow.ui \

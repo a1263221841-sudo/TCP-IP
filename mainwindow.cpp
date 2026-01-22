@@ -328,7 +328,7 @@ void MainWindow::ClientButtonStateFunc()
     ui->pushButton_StartListen->setEnabled(false);
     ui->pushButton_CloseListen->setEnabled(false);
     ui->plainTextEdit_SendMsg->setEnabled(false);//当用户选择客户端单选按钮时,禁止plainTextEdit控件输入
-
+    ui->pushButton_UdpTest->setEnabled(true);
     // 防止服务器启动监听之后,用户点击客服端单选按钮
     ui->plainTextEdit_MsgList->clear();
 
@@ -348,7 +348,7 @@ void MainWindow::ServerButtonStateFunc()
 
     ui->pushButton_StartListen->setEnabled(true);
     ui->pushButton_CloseListen->setEnabled(false);
-
+    ui->pushButton_UdpTest->setEnabled(false);
     NetworkClient.disconnect();
     ui->checkBox_ClientAutTest->setChecked(false);
 
